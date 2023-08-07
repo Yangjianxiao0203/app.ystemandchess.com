@@ -42,6 +42,8 @@ import {FinancialsHifiComponent} from "./pages/financials/financials-hifi.compon
 import {BoardHifiComponent} from "./pages/board/board-hifi.component";
 import {MentorProfileComponent} from "./pages/mentor-profile/mentor-profile.component"
 
+//inventory part
+import {StudentInventoryPrototypeComponent} from "./pages/student-inventory-prototype/student-inventory-prototype.component";
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
@@ -162,6 +164,13 @@ const routes: Routes = [
     data: { roles: ['mentor'] },
     canActivate: [LoginGuardService],
   },
+
+  {
+    path: 'student-inventory-prototype',
+    component: StudentInventoryPrototypeComponent,
+    data: { roles: ['student'] },
+    canActivate: [LoginGuardService],
+  }
 
 ];
 

@@ -18,6 +18,9 @@ export class LoginGuardService implements CanActivate {
     private userData;
 
     canActivate(route: ActivatedRouteSnapshot, state: RouterStateSnapshot): boolean {
+        //only for development
+        return true;
+
         this.isLoggedIn = this.cookie.get('login');
         this.roles = route.data['roles'] as Array<string>;
         this.redirect = route.data['redirect'];

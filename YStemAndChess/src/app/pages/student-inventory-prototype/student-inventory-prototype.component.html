@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>student-inventory</title>
+</head>
+
+<header>
+    <app-header></app-header>
+</header>
+<body>
+    <div class="container">
+        <div class="row pt-3 mb-sm-0 align-items-center">
+            <div class="header-box--name">
+                {{name}}'s Backpack
+            </div>
+            <div class="header-box--profile">
+                Profile
+            </div>
+            <div class="header-box--leaderboard">
+                Leaderboard
+            </div>
+        </div>
+        <div class="row" style="margin-top: 50px;">
+            <object type="image/svg+xml" data="../../../assets/svgs/student-inventory/bags.svg" class="item1"></object>
+            <div class="item2">
+                <div class="box-container">
+                    <div *ngFor="let box of boxes; let i = index" class="box-item">
+                      <img [src]="'../../../assets/svgs/student-inventory/inventory-' + i + '.svg'" alt="logo"> 
+                      <span>{{box}}</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <app-footer></app-footer>
+</body>
+</html>
